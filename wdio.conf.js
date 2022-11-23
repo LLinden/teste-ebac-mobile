@@ -17,8 +17,8 @@ exports.config = {
         "appWaitActivity": 'com.woocommerce.android.ui.login.LoginActivity',
         "adbExecTimeout": 40000
     }],
-    waitForTimeout: 20000,
-    mocaOpts: {
+    waitforTimeout: 30000,
+    mochaOpts: {
         timeout: 30000
     }
 }

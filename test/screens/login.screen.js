@@ -25,25 +25,25 @@ class LoginScreen {
     }
 
     async setStoreAddress(url) {
-        this.storeAddress.setValue(url)
+        await this.storeAddress.setValue(url)
     }
 
     async clickContinue() {
-        this.continue.click()
+        await this.continue.click()
     }
 
     async clickCredentials() {
-        this.credentials.click()
+        await this.credentials.click()
     }
 
     async login(username, password) {
-        this.username.setValue(username)
-        this.password.setValue(password)
-        this.continue.click()
+        await this.username.setValue(username)
+        await this.password.setValue(password)
+        await this.continue.click()
     }
 
     async gotwoFactorPasswordButton() {
-        this.twoFactorPasswordButton.click()
+        await this.twoFactorPasswordButton.click()
     }
 
     async twoFactorLogin(password) {

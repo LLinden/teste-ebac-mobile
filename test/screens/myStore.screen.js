@@ -8,10 +8,12 @@ class MyStoreScreen {
     }
 
     async getStoreName() {
+        await this.myStoreName.waitForExist()
         return await this.myStoreName.getText()
     }
 
     async getStoreLogo() {
+        await this.myStoreLogo.waitForExist()
         return await this.myStoreLogo.isDisplayed()
     }
 }
