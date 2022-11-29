@@ -1,0 +1,32 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1669723853862' stop='1669723883933'>
+    <name>Access Admin Panel</name>
+    <title>Access Admin Panel</title>
+    <test-cases>
+        <test-case start='1669723853862' status='broken' stop='1669723883912'>
+            <name>should login with valid credentials</name>
+            <title>should login with valid credentials</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='Pixel 2 API 28 9.0-9'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Execution video' source='35e1b79e-d1dd-49bb-8ac2-7cd2df98bd9e-attachment.mp4' type='video/mp4' size='189'/>
+            </attachments>
+            <failure>
+                <message>Timeout of 30000ms exceeded. The execution in the test "Access Admin Panel should login with valid credentials" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\Users\lucas.linden\Documents\Ebac\modulo-17\testes-mobile-ebac-shop\test\specs\login.spec.js)</message>
+                <stack-trace>Error: Timeout of 30000ms exceeded. The execution in the test "Access Admin Panel should login with valid credentials" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\Users\lucas.linden\Documents\Ebac\modulo-17\testes-mobile-ebac-shop\test\specs\login.spec.js)
+                    at createTimeoutError (C:\Users\lucas.linden\Documents\Ebac\modulo-17\testes-mobile-ebac-shop\node_modules\mocha\lib\errors.js:498:15)
+                    at Test.Runnable._timeoutError (C:\Users\lucas.linden\Documents\Ebac\modulo-17\testes-mobile-ebac-shop\node_modules\mocha\lib\runnable.js:431:10)
+                    at Timeout.&lt;anonymous> (C:\Users\lucas.linden\Documents\Ebac\modulo-17\testes-mobile-ebac-shop\node_modules\mocha\lib\runnable.js:246:24)
+                    at listOnTimeout (internal/timers.js:549:17)
+                    at processTimers (internal/timers.js:492:7)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

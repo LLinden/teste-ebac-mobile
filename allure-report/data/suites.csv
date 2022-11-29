@@ -1,2 +1,3 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Tue Nov 29 08:41:32 BRT 2022","Tue Nov 29 08:42:02 BRT 2022","30012","","Access Admin Panel","","Access Admin Panel","should login with valid credentials","should login with valid credentials",""
+"passed","Tue Nov 29 09:55:34 BRT 2022","Tue Nov 29 09:56:16 BRT 2022","42249","","Access Admin Panel","","Access Admin Panel","should login with valid credentials","should login with valid credentials",""
+"passed","Tue Nov 29 09:13:11 BRT 2022","Tue Nov 29 09:13:42 BRT 2022","30807","","Access Admin Panel","","Access Admin Panel","should login with valid credentials","should login with valid credentials",""
