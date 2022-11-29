@@ -9,7 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@wdio/cli": "^7.25.4"
+    "@wdio/allure-reporter": "^7.26.0",
+    "@wdio/cli": "^7.25.4",
+    "allure-commandline": "^2.20.1",
+    "wdio-video-reporter": "^3.3.0"
   },
   "devDependencies": {
     "@wdio/appium-service": "^7.25.4",
