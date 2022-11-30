@@ -7,11 +7,11 @@ const productScreen = require("../screens/product.screen");
 let usuario = "gerente";
 let senha = "GD*peToHNJ1#c$sgk08EaYJQ";
 let urlLoja = "http://lojaebac.ebaconline.art.br/";
-let nomeProduto = "Teste"
-let descricao = "Teste"
-let precoNormal = 20
-let precoVenda = 10
-let sku = 123
+let nomeProduto = `Teste ${Math.floor(Math.random() * 100000000)}`;
+let descricao = "Teste";
+let precoNormal = 20;
+let precoVenda = 10;
+let sku = 123;
 
 describe("Cadastro de produto", () => {
   it("deve cadastrar produto com sucesso", async () => {
@@ -26,20 +26,18 @@ describe("Cadastro de produto", () => {
     await myStoreScreen.clickProductScreen();
     await productScreen.clickAddProduct();
     await productScreen.clickAddSimpleProduct();
-    await productScreen.fillProductName(nomeProduto)
-    await productScreen.fillProductDescription(descricao)
-    await productScreen.clickBack()
-    await productScreen.clickAddPrice()
-    await priceScreen.fillRegularPrice(precoNormal)
-    await priceScreen.fillSalePrice(precoVenda)
-    await productScreen.clickBack()
-    await productScreen.clickInventory()
-    await productScreen.fillSku(sku)
-    await productScreen.clickBack()
-    
+    await productScreen.fillProductName(nomeProduto);
+    await productScreen.fillProductDescription(descricao);
+    await productScreen.clickBack();
+    await productScreen.clickAddPrice();
+    await priceScreen.fillRegularPrice(precoNormal);
+    await priceScreen.fillSalePrice(precoVenda);
+    await productScreen.clickBack();
+    await productScreen.clickInventory();
+    await productScreen.fillSku(sku);
+    await productScreen.clickBack();
 
-
-    expect(await myStoreScreen.getStoreLogo()).toBeTruthy();
-    expect(await myStoreScreen.getStoreName()).toEqual("EBAC - Shop");
+    expect(await productScreen.displayMyProduct()).toBeTruthy();
+    expect(await productScreen.getProductName()).toEqual("Teste");
   });
 });

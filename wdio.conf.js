@@ -10,7 +10,8 @@ exports.config = {
   //key: "mvDcLTLsveY6FP19yP42",
   //services: ['appium'],
   //services: ["browserstack"],
-  specs: ["./test/specs/**/*.spec.js"],
+  //specs: ["./test/specs/**/*.spec.js"],
+  specs: ["./test/specs/cadastroProduto.spec.js"],
   framework: "mocha",
   capabilities: [
     {
@@ -32,9 +33,9 @@ exports.config = {
       //"browserstack.local": false,
     },
   ],
-  waitforTimeout: 50000,
+  waitforTimeout: 100000,
   mochaOpts: {
-    timeout: 50000,
+    timeout: 100000,
   },
   reporters: [
     [
