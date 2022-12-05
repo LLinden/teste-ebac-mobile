@@ -6,8 +6,8 @@ let usuario = "";
 let senha = "";
 let urlLoja = "";
 
-describe("Access Admin Panel", () => {
-  it("should login with valid credentials", async () => {
+describe("Acessar painel de admin", () => {
+  it("deve logar com credenciais válidas", async () => {
     await homeScreen.skipScreen();
     await homeScreen.goToLogin();
     await loginScreen.setStoreAddress(urlLoja);
