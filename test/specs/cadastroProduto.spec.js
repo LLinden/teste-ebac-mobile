@@ -4,9 +4,9 @@ const myStoreScreen = require("../screens/myStore.screen");
 const priceScreen = require("../screens/price.screen");
 const productScreen = require("../screens/product.screen");
 
-let usuario = "gerente";
-let senha = "GD*peToHNJ1#c$sgk08EaYJQ";
-let urlLoja = "http://lojaebac.ebaconline.art.br/";
+let usuario = "";
+let senha = "";
+let urlLoja = "";
 let nomeProduto = `Teste ${Math.floor(Math.random() * 100000000)}`;
 let descricao = "Teste";
 let precoNormal = 20;

@@ -2,9 +2,9 @@ const homeScreen = require("../screens/home.screen");
 const loginScreen = require("../screens/login.screen");
 const myStoreScreen = require("../screens/myStore.screen");
 
-let usuario = "gerente";
-let senha = "GD*peToHNJ1#c$sgk08EaYJQ";
-let urlLoja = "http://lojaebac.ebaconline.art.br/";
+let usuario = "";
+let senha = "";
+let urlLoja = "";
 
 describe("Access Admin Panel", () => {
   it("should login with valid credentials", async () => {

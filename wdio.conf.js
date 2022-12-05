@@ -2,17 +2,19 @@ const { join } = require("path");
 const allure = require("allure-commandline");
 const video = require("wdio-video-reporter");
 
+/* O projeto está configurado para execução no BrowserStack. 
+Dados comentados são para execução local.   
+*/
 exports.config = {
   //hostname: "localhost",
   //port: 4723,
   //path: "/wd/hub",
-  // preencher com usuário e senha do browserstack
+  // preencher user e key com usuário e senha do browserstack
   user: "",
   key: "",
   //services: ['appium'],
   services: ["browserstack"],
-  //specs: ["./test/specs/**/*.spec.js"],
-  specs: ["./test/specs/cadastroProduto.spec.js"],
+  specs: ["./test/specs/**/*.spec.js"],
   framework: "mocha",
   capabilities: [
     {
@@ -30,7 +32,8 @@ exports.config = {
       os_version: "12.0",
       app:
         process.env.BROWSERSTACK_APP_ID ||
-        "bs://a142723ba695d686187ccb213634e286c4f77b24",
+        // preencher com browserstacl app id
+        "",
       "browserstack.local": false,
     },
   ],
@@ -38,6 +41,8 @@ exports.config = {
   mochaOpts: {
     timeout: 100000,
   },
+
+  // relatório de execução
   reporters: [
     [
       "allure",
@@ -47,14 +52,18 @@ exports.config = {
         disableWebdriverScreenshotsReporting: true,
       },
     ],
+
+    // vídeo da execução
     [
       video,
       {
-        saveAllVideos: false, // If true, also saves videos for successful test cases
-        videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
+        saveAllVideos: false, // se verdadeiro, salva também os casos de teste de sucesso
+        videoSlowdownMultiplier: 3, // quanto maior o valor, mais lentos os vídeos [valores 1-100]
       },
     ],
   ],
+
+  // configs do allure reporter
   onComplete: function () {
     const reportError = new Error("Could not generate Allure report");
     const generation = allure(["generate", "allure-results", "--clean"]);
