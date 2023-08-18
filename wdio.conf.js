@@ -2,39 +2,22 @@ const { join } = require("path");
 const allure = require("allure-commandline");
 const video = require("wdio-video-reporter");
 
-/* O projeto está configurado para execução no BrowserStack. 
-Dados comentados são para execução local.   
-*/
 exports.config = {
-  //hostname: "localhost",
-  //port: 4723,
-  //path: "/wd/hub",
-  // preencher user e key com usuário e senha do browserstack
-  user: "",
-  key: "",
-  //services: ['appium'],
-  services: ["browserstack"],
+  hostname: "localhost",
+  port: 4723,
+  path: "/wd/hub",
+  services: ['appium'],
   specs: ["./test/specs/**/*.spec.js"],
   framework: "mocha",
   capabilities: [
     {
       platformName: "Android",
-      //platformVersion: "9.0",
-      //deviceName: "Pixel 2 API 28",
-      //automationName: "UiAutomator2",
-      //app: join(process.cwd(), "./app/android/wcandroid-11.0.apk"),
-      //appWaitActivity: "com.woocommerce.android.ui.login.LoginActivity",
-      //adbExecTimeout: 40000,
-      project: "Meu primeiro projeto em Device Farm",
-      build: "browserstack-build-1",
-      name: "teste_ebac_shop",
-      device: "Samsung Galaxy S22 Ultra",
-      os_version: "12.0",
-      app:
-        process.env.BROWSERSTACK_APP_ID ||
-        // preencher com browserstacl app id
-        "",
-      "browserstack.local": false,
+      platformVersion: "9.0",
+      deviceName: "Pixel 2 API 28",
+      automationName: "UiAutomator2",
+      app: join(process.cwd(), "./app/android/wcandroid-11.0.apk"),
+      appWaitActivity: "com.woocommerce.android.ui.login.LoginActivity",
+      adbExecTimeout: 40000,
     },
   ],
   waitforTimeout: 100000,

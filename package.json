@@ -4,7 +4,8 @@
   "description": "Projeto de Testes EBAC Mobile",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:ios": "npx run ./wdio.conf.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,8 +13,10 @@
     "@wdio/allure-reporter": "^7.26.0",
     "@wdio/browserstack-service": "^7.27.0",
     "@wdio/cli": "^7.25.4",
+    "@wdio/sauce-service": "^7.16.13",
     "allure-commandline": "^2.20.1",
-    "appium": "^1.22.3",
+    "appium": "^2.0.1",
+    "run": "^1.4.0",
     "wdio-video-reporter": "^3.3.0"
   },
   "devDependencies": {
