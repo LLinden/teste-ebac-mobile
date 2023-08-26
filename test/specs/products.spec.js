@@ -1,7 +1,7 @@
-const productsViewScreen = requeire("../screens/productView.screen");
+const productViewScreen = require("../screens/productView.screen");
 
 describe("Product List", () => {
   it("should list products", async () => {
-    expect(await productsViewScreen.product("Augusta Pullover")).toExist();
+    expect(await productViewScreen.product("Augusta Pullover")).toExist();
   });
 });
