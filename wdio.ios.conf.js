@@ -7,10 +7,10 @@ exports.config = {
   port: 4723,
   path: "/wd/hub",
   services: ['appium'],
-  specs: ["./test/specs/**/products.spec.js"],
+  specs: ["./test/specs/**/homework.spec.js"],
   suites: {
-    products: [
-      './test/specs/**/products.spec.js'
+    homework: [
+      './test/specs/**/homework.spec.js'
     ]
   },
   framework: "mocha",
