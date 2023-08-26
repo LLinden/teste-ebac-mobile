@@ -5,7 +5,7 @@ class detalheProdutoScreen {
     }
 
     get tamanho() {
-        return $(`~Size Selecione uma Size`)
+        return $(`-ios predicate string:name CONTAINS 'Size'`)
     }
 
     get selecionaTamanho() {
@@ -13,7 +13,7 @@ class detalheProdutoScreen {
     }
 
     get cor() {
-        return $(`~Color Selecione uma Color`)
+        return $(`-ios predicate string:name CONTAINS 'Color'`)
     }
 
     get selecionaCor() {
