@@ -20,6 +20,14 @@ class detalheProdutoScreen {
         return $(`~Red`)
     }
 
+    get iconeCarrinho() {
+        return $(`-ios class chain:**/XCUIElementTypeButton[1]`)
+    }
+
+    async clicaIconeCarrinho() {
+        await this.iconeCarrinho.click()
+    }
+
     async clicaSelecionaCor() {
         await this.selecionaCor.click()
     }
