@@ -8,6 +8,11 @@ exports.config = {
   path: "/wd/hub",
   services: ['appium'],
   specs: ["./test/specs/**/products.spec.js"],
+  suites: {
+    products: [
+      './test/specs/**/products.spec.js'
+    ]
+  },
   framework: "mocha",
   capabilities: [
     {
